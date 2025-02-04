@@ -1,5 +1,19 @@
-@Restaurants.API_HostAddress = https://localhost:7187
+@host = https://localhost
+@port = 7187
+@Restaurants.API_HostAddress = {{host}}:{{port}}
 
-GET {{Restaurants.API_HostAddress}}/api/weatherforecast/example
+GET {{Restaurants.API_HostAddress}}/api/weatherforecast
+Accept: application/json
 
+###
+
+GET {{Restaurants.API_HostAddress}}/api/weatherforecast/23/currentDay?max=15
+Accept: application/json
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/weatherforecast
+Content-Type: application/json
+
+"Jakub"
 ###
